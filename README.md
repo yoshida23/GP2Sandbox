@@ -12,7 +12,12 @@ Unityでのチーム開発やオブジェクト指向、SOLID原則を学ぶた�
 
 1. GitHubにサインインして、このリポジトリーをForkします
 1. GitHub Desktopなどでクローンします
-1. クローンしたフォルダーをUnityで開きます
+1. 今回は自分達の学習に利用するので、下の **For my own purposes** を選択して Continue します
+
+![プルリクエスト先を自分のリポジトリーへ](Documents/images/img00.png)
+
+4. Unity Hubを起動して、リストに追加 をクリックして、クローンしたフォルダーを追加します
+1. GP2SandboxプロジェクトをUnityで開きます
 1. Unityが開いたら、Windowメニューから TextMeshPro > Import TMP Essential Resources を選択して Import します
 1. Projectウィンドウから GP2Sandbox > Scenes フォルダーを開いて、 System シーンをダブルクリックして開きます
 
@@ -30,7 +35,7 @@ Unityでのチーム開発やオブジェクト指向、SOLID原則を学ぶた�
 
 
 ## このプロジェクトでやりたいこと
-- Git
+- [GitHub練習](./Documents/github_practice.md)
   - ブランチ操作
   - コンフリクトの発生と解決方法、対策
 - unitypackageへのエクスポートによる共同開発
