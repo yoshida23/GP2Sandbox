@@ -104,22 +104,106 @@ devで追加したSphereを、mainブランチにも反映させてみます。�
 
 まずはAさんの作業をします。
 
+1. GitHub Desktopでdevブランチに切り替えます
+1. Unityに切り替えます
+1. Projectウィンドウの GP2Sandbox/Scenes フォルダーから Game シーンをHierarchyウィンドウにドラッグ&ドロップします
+1. Hierarchyウィンドウで、Systemシーンに作成したSphereをドラッグして、Gameシーンに移動します
+
+![SphereをGameシーンへ](./images/img09.png)
+
+5. SphereをX=`2`, Y=`0`, Z=`2` あたりに移動します(実際はどこでもいいです)
+
+![Sphereを配置](./images/img10.png)
+
+6. FileメニューからSaveでシーンを保存します
+
+以上でAさんの担当作業は完了です。コミットしておきます。まだマージはしないでください。
+
+7. GitHub Desktopに切り替えます
+1. Summaryに`Sphereを配置`など入力してコミットします
+
+![Aさんの作業をコミット](./images/img11.png)
+
 次にBさん役になって作業を進めます。
 
-- mainブランチに切り替えます
-- UnityでReload
-- devBブランチを作成
-- Systemシーンを開いて状態確認
-- Gameシーンを読み込み
-- ちょっとSphereを動かしてしまう
+1. GitHub Desktopで、mainブランチに切り替えます
+1. Unityに切り替えてReloadします。Sphereが元に戻るのを確認します
+1. GitHub Desktopに切り替えます
+1. ブランチの作成手順を確認して、`devB`ブランチを作成します
+1. Unityに切り替えます
+1. Hierarchyウィンドウの + をクリックして、3D Object > Cubeを選択して、Cubeを生成します
+1. 先ほどのSphereの操作と同様に、作成したCubeをドラッグしてGameシーンでドロップしてGameシーンへ移動します
+1. CubeをX=`-2`, Y=`0`, Z=`-2`あたりに移動させてみます
 
-Aさんが作業を完了してmainへマージ。
-続けてBさんもmainへマージ。
+![Cubeを配置](./images/img12.png)
 
-さて、何が起きるか。
+9. FileメニューからSaveでシーンを保存します
+
+以上で作業完了です。コミットしておきます。
+
+10. GitHub Desktopに切り替えます
+1. Summaryに`Cubeを配置`など入力してコミットします
+
+以上でAとB両者の作業が完了しました。mainにマージします。
+
+1. GitHub DesktopのCurrent branchを、**マージ先**であるmainに切り替えます
+1. ブランチの切り替えが完了したら、Unityを選択してReloadして変更を反映させます
+1. GitHub Desktopに切り替えて、Current branchをクリックして、一番下の Choose a branch to merge into main をクリックします
+
+![マージ開始](./images/img07.png)
+
+4. マージ元のdevブランチをクリックして選択して、 Merge dev into main をクリックします
+
+![マージ元のブランチの指定](./images/img08.png)
+
+Unityに切り替えてReloadをして、mainブランチにAさんの作業が反映されたことを確認します。続けてBさんの作業をマージします。
+
+5. GitHub Desktopに切り替えて、Current branchをクリックして、一番下の Choose a branch to merge into main をクリックします
+1. マージ元のdevBブランチをクリックして選択して、 Merge dev into main をクリックします
+1. マージが完了したら、Unityに切り替えてReloadします
+
+以上で、両者の作業が結合できました。
+
+## コンフリクト体験
+
+ではGitのハマりポイントである **コンフリクト(=Conflict 衝突)** を試してみます。まずはdevブランチとdevBブランチにmainブランチをマージしてmainの状態に統一します。
+
+1. GitHub Desktopでdevブランチに切り替えます
+1. Current branchをクリックして、Choose a branch to merge into dev をクリックします
+1. mainを選択して、Merge main into dev をクリックします
+
+これでdevがmainと同じになりました。devBも同様の手順でmainをマージしてください。
+
+それではコンフリクトを発生させます。今はdevBブランチのはずなので、そこで以下の変更をします
+
+1. Unityに切り替えます
+1. HierarchyウィンドウのSphereとCubeのX座標を両方とも`0`にします
+1. FileメニューからSaveを選択して保存します
+1. `X座標を0`などでコミットします
+
+![devBのXを0に設定](./images/img13.png)
+
+1. GitHub Desktopに切り替えて、devブランチに切り替えます
+1. Unityに切り替えてReloadします
+1. HierarchyウィンドウのSphereのX座標を`-2`、CubeのX座標を`2`にして場所を入れ替えます
+1. FileメニューからSaveを選択して保存します
+1. `X座標を反転`などでコミットします
+
+![devのSphereとCubeのX位置を反転](./images/img14.png)
+
+それではdevとdevBブランチをmainにマージします。
 
 
-## コンフリクトを発生させる
+
+
+
+先の例のように、別のメンバーが同時に同じ場所を変更しなければ問題なく作業が進められますが、そのためには他のメンバーが何をしているかを把握しておく必要があります。
+
+
+
+
+
+
 
 ## コンフリクトの解消方法
 
