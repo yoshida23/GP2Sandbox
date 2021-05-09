@@ -14,12 +14,10 @@ Unityでのチーム開発やオブジェクト指向、SOLID原則を学ぶた�
 1. GitHub Desktopなどでクローンします
 1. クローンしたフォルダーをUnityで開きます
 1. Unityが開いたら、Windowメニューから TextMeshPro > Import TMP Essential Resources を選択して Import します
+1. Projectウィンドウから GP2Sandbox > Scenes フォルダーを開いて、 System シーンをダブルクリックして開きます
 
+以上で準備完了です。Playすればプロジェクトが起動します。
 
-の読み込みが必要なので指示に従って読み込んでください
-1. Projectウィンドウから TeamTutorialEasy > Scenes フォルダーを開いて、 System シーンをダブルクリックして開きます
-
-以上で準備完了です。Playしてください。
 
 ## 操作方法
 - 画面クリックでゲーム開始
