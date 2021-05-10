@@ -119,13 +119,12 @@ AさんとBさんの両役になって作業を進めてみましょう。
 ![Sphereを配置](./images/img10.png)
 
 6. FileメニューからSaveでシーンを保存します
-
-以上でAさんの担当作業は完了です。コミットしておきます。まだマージはしないでください。
-
-7. GitHub Desktopに切り替えます
+1. GitHub Desktopに切り替えます
 1. Summaryに`Sphereを配置`など入力してコミットします
 
 ![Aさんの作業をコミット](./images/img11.png)
+
+以上でAさんの担当作業は完了です。まだマージはしないでください。
 
 次にBさん役になって作業を進めます。
 
@@ -150,18 +149,17 @@ AさんとBさんの両役になって作業を進めてみましょう。
 以上でAとB両者の作業が完了しました。mainにマージします。
 
 1. GitHub DesktopのCurrent branchを、**マージ先**であるmainに切り替えます
-1. ブランチの切り替えが完了したら、Unityを選択してReloadして変更を反映させます
-1. GitHub Desktopに切り替えて、Current branchをクリックして、一番下の Choose a branch to merge into main をクリックします
+1. Current branchをクリックして、一番下の Choose a branch to merge into main をクリックします
 
 ![マージ開始](./images/img07.png)
 
-4. マージ元のdevブランチをクリックして選択して、 Merge dev into main をクリックします
+3. マージ元のdevブランチをクリックして選択して、 Merge dev into main をクリックします
 
 ![マージ元のブランチの指定](./images/img08.png)
 
 Unityに切り替えてReloadをして、mainブランチにAさんの作業が反映されたことを確認します。続けてBさんの作業をマージします。
 
-5. GitHub Desktopに切り替えて、Current branchをクリックして、一番下の Choose a branch to merge into main をクリックします
+4. GitHub Desktopに切り替えて、Current branchをクリックして、一番下の Choose a branch to merge into main をクリックします
 1. マージ元のdevBブランチをクリックして選択して、 Merge dev into main をクリックします
 1. マージが完了したら、Unityに切り替えてReloadします
 
@@ -186,15 +184,27 @@ Unityに切り替えてReloadをして、mainブランチにAさんの作業が�
 
 ![devBのXを0に設定](./images/img13.png)
 
-1. GitHub Desktopに切り替えて、devブランチに切り替えます
+1. Current Branchをdevブランチに切り替えます
 1. Unityに切り替えてReloadします
-1. HierarchyウィンドウのSphereのX座標を`-2`、CubeのX座標を`2`にして場所を入れ替えます
+1. HierarchyウィンドウのSphereのX座標を`-2`、CubeのX座標を`2`にして左右の場所を入れ替えます
 1. FileメニューからSaveを選択して保存します
-1. `X座標を反転`などでコミットします
+1. GitHub Desktopに切り替えて`X座標を反転`などでコミットします
 
 ![devのSphereとCubeのX位置を反転](./images/img14.png)
 
-それではdevとdevBブランチをmainにマージします。
+それでは先にやった手順でmainブランチに切り替えて、devとdevBブランチをmainにマージしてみてください。`devB`ブランチをマージしようとすると以下のような警告が表示されます。
+
+![Conflictの警告]()
+
+Merge devB into main をクリックしてマージを試してください。以下のようなダイアログが表示されてマージさせてくれません。
+
+![conflictの解決要求]()
+
+これが **conflict** です。
+
+
+
+
 
 
 
